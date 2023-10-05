@@ -1,18 +1,27 @@
 =begin
-  #Question 1
-  What would you expect the code below to print out?
-=end
-def question1
-  numbers = [1, 2, 2, 3]
-  numbers.uniq
+  #Question
+  If we build an array like this:
+    flintstones = ["Fred", "Wilma"]
+    flintstones << ["Barney", "Betty"]
+    flintstones << ["BamBam", "Pebbles"]
 
-  puts numbers
+  We will end up with this "nested" array:    
+    ["Fred", "Wilma", ["Barney", "Betty"], ["BamBam", "Pebbles"]]
+
+  Make this into an un-nested array.
+
+=end
+def my_app
+  flintstones = ["Fred", "Wilma"]
+  flintstones << ["Barney", "Betty"]
+  flintstones << ["BamBam", "Pebbles"] 
+
+  p flintstones.flatten!
 end
-question1()
+my_app()
 
 =begin
-  #=> 1, 2, 2, 3 (on separate lines)
-  #.uniq method does not mutate the array, that version would be .uniq!
+  returns ["Fred", "Wilma", "Barney", "Betty", "BamBam", "Pebbles"]
 =end
 
 

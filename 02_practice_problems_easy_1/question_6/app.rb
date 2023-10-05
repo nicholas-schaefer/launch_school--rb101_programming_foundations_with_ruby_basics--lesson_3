@@ -1,18 +1,20 @@
 =begin
-  #Question 1
-  What would you expect the code below to print out?
+  #Question 
+  Starting with the string: 
+    famous_words = "seven years ago..."
+  show two different ways to put the expected "Four score and " in front of it.
 =end
-def question1
-  numbers = [1, 2, 2, 3]
-  numbers.uniq
-
-  puts numbers
+def my_app
+  famous_words = "seven years ago..."
+  puts "Four score and " + famous_words
+  puts "Four score and #{famous_words}"
+  puts famous_words.prepend("Four score and ")
+  puts "Four score and " << famous_words
 end
-question1()
+my_app()
 
 =begin
-  #=> 1, 2, 2, 3 (on separate lines)
-  #.uniq method does not mutate the array, that version would be .uniq!
+  These ways all produce same thing!
 =end
 
 

@@ -2,13 +2,12 @@
   #Question 1
   What would you expect the code below to print out?
 =end
-def question1
-  numbers = [1, 2, 2, 3]
-  numbers.uniq
-
-  puts numbers
+def my_app
+  p (10...100).to_a.include?(42)
+  p (10...100).cover?(42)
+  p (10...100) === 42
 end
-question1()
+my_app()
 
 =begin
   #=> 1, 2, 2, 3 (on separate lines)
