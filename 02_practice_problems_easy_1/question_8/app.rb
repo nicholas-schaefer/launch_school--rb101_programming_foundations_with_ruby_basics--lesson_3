@@ -1,18 +1,18 @@
 =begin
-  #Question 1
-  What would you expect the code below to print out?
+  #Question
+  Given the hash below
+    flintstones = { "Fred" => 0, "Wilma" => 1, "Barney" => 2, "Betty" => 3, "BamBam" => 4, "Pebbles" => 5 }
+  
+    Create an array containing only two elements: Barney's name and Barney's number.
 =end
-def question1
-  numbers = [1, 2, 2, 3]
-  numbers.uniq
-
-  puts numbers
+def my_app
+  flintstones = { "Fred" => 0, "Wilma" => 1, "Barney" => 2, "Betty" => 3, "BamBam" => 4, "Pebbles" => 5 }
+  p flintstones.assoc("Barney")
 end
-question1()
+my_app()
 
 =begin
-  #=> 1, 2, 2, 3 (on separate lines)
-  #.uniq method does not mutate the array, that version would be .uniq!
+
 =end
 
 
