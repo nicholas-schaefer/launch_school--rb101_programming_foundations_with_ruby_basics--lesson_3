@@ -1,18 +1,23 @@
 =begin
   #Question 1
-  What would you expect the code below to print out?
+  Replace the word "important" with "urgent" in this string:
 =end
-def question1
-  numbers = [1, 2, 2, 3]
-  numbers.uniq
 
-  puts numbers
+advice = "Few things in life are as important as house training your pet dinosaur."
+
+def my_app
+  
+  advice = "Few things in life are as important as house training your pet dinosaur."
+  puts advice.sub!("important", "urgent")
+  puts advice
+
+
 end
-question1()
+my_app()
 
 =begin
-  #=> 1, 2, 2, 3 (on separate lines)
-  #.uniq method does not mutate the array, that version would be .uniq!
+  Both advice.sub! and subsequent advice variable are the same
+  because the "sub!" method mutates the caller. 
 =end
 
 
