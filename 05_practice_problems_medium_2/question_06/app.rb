@@ -1,37 +1,25 @@
 =begin
   #Question
-  Consider these two simple methods:
-    def foo(param = "no")
-      "yes"
+  How could the following method be simplified without changing its return value?
+    
+  def color_valid(color)
+    if color == "blue" || color == "green"
+      true
+    else
+      false
     end
+  end
 
-    def bar(param = "no")
-      param == "no" ? "yes" : "no"
-    end
-  
-  What would be the return value of the following method invocation?
-    bar(foo)
 =end
 def my_app
-
-  def foo(param = "no")
-    "yes"
+  def color_valid(color)
+    color == "blue" || color == "green"
   end
-
-  def bar(param = "no")
-    param == "no" ? "yes" : "no"
-  end
-
-  bar(foo)
-
 end
 my_app()
 
 =begin
   #Further Explanation
-  returns "no"
-  - method invocation foo retunrs "yes"
-  - "yes" then becomes the arguement passed into method bar.
-  - bar("yes") evauates to "no"
+  Ruby automaticlaly evalutes statements!!!
 =end
 

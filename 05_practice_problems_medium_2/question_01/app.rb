@@ -1,37 +1,33 @@
 =begin
   #Question
-  Consider these two simple methods:
-    def foo(param = "no")
-      "yes"
-    end
+Every object in Ruby has access to a method called object_id, which returns a numerical value that uniquely identifies the object.
+This method can be used to determine whether two variables are pointing to the same object.
+Take a look at the following code and predict the output:
 
-    def bar(param = "no")
-      param == "no" ? "yes" : "no"
-    end
-  
-  What would be the return value of the following method invocation?
-    bar(foo)
+    a = "forty two"
+    b = "forty two"
+    c = a
+
+    puts a.object_id
+    puts b.object_id
+    puts c.object_id
 =end
 def my_app
-
-  def foo(param = "no")
-    "yes"
-  end
-
-  def bar(param = "no")
-    param == "no" ? "yes" : "no"
-  end
-
-  bar(foo)
-
+  a = "forty two"
+  b = "forty two"
+  c = a
+  
+  puts a.object_id # random number e.g. 78
+  puts b.object_id # dif random number, but not same as last one, e.g. 879
+  puts c.object_id # same number as object_id of variable a, i.e. 78
 end
 my_app()
 
 =begin
   #Further Explanation
-  returns "no"
-  - method invocation foo retunrs "yes"
-  - "yes" then becomes the arguement passed into method bar.
-  - bar("yes") evauates to "no"
+  Variables are simply references to a space in memory.
+  When variables are first assigned
+  - If they are assigned to a value, their object id in memory will be any unused space
+  - If they are assigned to a another variable, then via the transitive property their object id will equal the object id of the variable they're assigned too.
 =end
 
